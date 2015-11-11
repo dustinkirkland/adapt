@@ -7,5 +7,7 @@ adapt (1.0) unreleased; urgency=medium
   * adapt => usr/bin/adapt, === added directory usr, === added directory
     usr/bin:
     - moved into place
+  * debian/install:
+    - install our binary
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Oct 2015 10:16:12 -0700
