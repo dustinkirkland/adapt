@@ -46,7 +46,7 @@ case "$(uname -m)" in
 	;;
 esac
 DISTRO="ubuntu"
-RELEASE=$(distro-info --devel)
+RELEASE=$(distro-info --stable)
 while [ ! -z "$1" ]; do
 	case "$1" in
 		-c|--command)

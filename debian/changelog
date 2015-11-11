@@ -9,5 +9,7 @@ adapt (1.0) unreleased; urgency=medium
     - moved into place
   * debian/install:
     - install our binary
+  * usr/bin/adapt:
+    - default to latest stable Ubuntu
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Oct 2015 10:16:12 -0700
