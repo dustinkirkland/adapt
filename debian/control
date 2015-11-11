@@ -1,0 +1,16 @@
+Source: adapt
+Section: admin
+Priority: optional
+Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~),
+Standards-Version: 3.9.6
+Homepage: http://launchpad.net/adapt
+
+Package: adapt
+Architecture: all
+Depends: ${misc:Depends}, lxd
+Description: adapt package from one version of Ubuntu to another
+ This package provides a simple, clean method to install and use
+ packages, services, and binaries from one version of Ubuntu onto
+ another, without requiring PPAs.
+ Instead, it uses LXD and Ubuntu system containers.

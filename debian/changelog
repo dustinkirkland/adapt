@@ -1,0 +1,8 @@
+adapt (1.0) unreleased; urgency=medium
+
+  * === added directory debian, === added directory debian/source,
+    debian/compat, debian/control, debian/copyright, debian/rules,
+    debian/source/format:
+    - initial packaging
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Oct 2015 10:16:12 -0700
