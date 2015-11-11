@@ -4,5 +4,8 @@ adapt (1.0) unreleased; urgency=medium
     debian/compat, debian/control, debian/copyright, debian/rules,
     debian/source/format:
     - initial packaging
+  * adapt => usr/bin/adapt, === added directory usr, === added directory
+    usr/bin:
+    - moved into place
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Oct 2015 10:16:12 -0700
