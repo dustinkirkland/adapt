@@ -1,6 +1,8 @@
 adapt (1.1) unreleased; urgency=medium
 
-  * UNRELEASED
+  * === added directory img, img/adapt_14.png, img/adapt_192.png,
+    img/adapt_64.png, img/adapt.png:
+    - added logos
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sun, 17 Jan 2016 18:17:14 +0100
 
