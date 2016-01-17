@@ -1,4 +1,4 @@
-adapt (1.0) unreleased; urgency=medium
+adapt (1.0-0ubuntu1) xenial; urgency=medium
 
   * === added directory debian, === added directory debian/source,
     debian/compat, debian/control, debian/copyright, debian/rules,
@@ -12,4 +12,4 @@ adapt (1.0) unreleased; urgency=medium
   * usr/bin/adapt:
     - default to latest stable Ubuntu
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Oct 2015 10:16:12 -0700
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Sun, 17 Jan 2016 18:17:12 +0100
