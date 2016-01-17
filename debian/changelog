@@ -1,3 +1,9 @@
+adapt (1.1) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Sun, 17 Jan 2016 18:17:14 +0100
+
 adapt (1.0-0ubuntu1) xenial; urgency=medium
 
   * === added directory debian, === added directory debian/source,
