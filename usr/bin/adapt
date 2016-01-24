@@ -53,7 +53,7 @@ while [ ! -z "$1" ]; do
 			COMMAND="$2"
 			shift 2
 		;;
-		--debug)
+		-v|--verbose|--debug)
 			set -x
 			shift
 		;;
@@ -80,11 +80,21 @@ case "$CMD" in
 	;;
 esac
 
+# Default centos to v7
+[ "$DISTRO" = "centos" ] && [ -z "$RELEASE" ] && RELEASE=7
+
 # Launch a new image, only if necessary
 NAME="$PKG-$DISTRO-$RELEASE"
 if ! match=$(lxc list | grep " $NAME "); then
 	lxc remote add images images.linuxcontainers.org 2>/dev/null || true
 	lxc launch images:$DISTRO/$RELEASE/$ARCH/default "$NAME"
+	if [ "$DISTRO" = "ubuntu" ]; then
+		# We want command-not-found and unattended upgrades enabled
+		run-one-until-success lxc exec $NAME -- ping -c 1 archive.ubuntu.com
+		lxc exec $NAME -- apt update --fix-missing
+		lxc exec $NAME -- apt install -y --force-yes command-not-found unattended-upgrades
+		lxc exec $NAME -- sed -i "s:^//\(.*-updates.*\):    \1:" /etc/apt/apt.conf.d/50unattended-upgrades
+	fi
 fi
 
 case "$CMD" in
@@ -96,16 +106,24 @@ lxc exec $NAME -- $COMMAND \$@
 EOF
 		chmod +x "$HOME/.$PKG/$COMMAND"
 		sed -i -e ":PATH=.*$HOME/.$PKG:d" $HOME/.bashrc
-		echo "PATH=$HOME/.$PKG:$PATH" >> $HOME/.bashrc
+		echo "export PATH=$HOME/.$PKG:$PATH" >> $HOME/.bashrc
 	;;
-	install)
+	install|purge|erase)
 		case "$DISTRO" in
 			ubuntu|debian)
-#				lxc exec $NAME -- apt update
-				lxc exec $NAME -- apt install -y $PACKAGES
+				if [ "$CMD" = "install" ]; then
+					lxc exec $NAME -- apt install -y --force-yes $PACKAGES
+				else
+					lxc exec $NAME -- apt purge -y --force-yes $PACKAGES
+					lxc exec $NAME -- apt-get autoremove -y
+				fi
 			;;
 			centos|fedora)
-				lxc exec $NAME -- yum install $PACKAGES
+				if [ "$CMD" = "install" ]; then
+					lxc exec $NAME -- yum install $PACKAGES
+				else
+					lxc exec $NAME -- yum erase $PACKAGES
+				fi
 			;;
 		esac
 	;;
