@@ -23,9 +23,9 @@ set -e
 usage() {
 	echo "
 Example usage
-   adapt install -r vivid -p maas
-   adapt run -r wily -c "juju version"
-   adapt alias -r wily -c juju
+   adapt install -r wily -p tomcat7
+   adapt run -r xenial -c 'gcc -v'
+   adapt alias -r xenial -c juju
    adapt unalias -c juju
    adapt shell -d centos -r 6
    adapt list
@@ -46,7 +46,7 @@ case "$(uname -m)" in
 	;;
 esac
 DISTRO="ubuntu"
-RELEASE=$(distro-info --stable)
+RELEASE=$(distro-info --latest)
 while [ ! -z "$1" ]; do
 	case "$1" in
 		-c|--command)
@@ -101,8 +101,8 @@ EOF
 	install)
 		case "$DISTRO" in
 			ubuntu|debian)
-#				lxc exec $NAME -- apt-get update
-				lxc exec $NAME -- apt-get install $PACKAGES
+#				lxc exec $NAME -- apt update
+				lxc exec $NAME -- apt install -y $PACKAGES
 			;;
 			centos|fedora)
 				lxc exec $NAME -- yum install $PACKAGES
