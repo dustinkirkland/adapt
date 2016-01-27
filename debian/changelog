@@ -10,6 +10,8 @@ adapt (1.1) unreleased; urgency=medium
     - apt update, -y
     - install unattended-upgrades, enable
     - add purge|erase command
+  * debian/control:
+    - depend on run-one
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sun, 17 Jan 2016 18:17:14 +0100
 
