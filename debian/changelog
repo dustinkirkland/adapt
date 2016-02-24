@@ -1,9 +1,9 @@
-adapt (1.2) unreleased; urgency=medium
+adapt (1.2-0ubuntu1) xenial; urgency=medium
 
   * usr/bin/adapt:
     - fix github issue #1, -d
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 27 Jan 2016 10:20:36 -0800
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 24 Feb 2016 14:04:19 -0500
 
 adapt (1.1-0ubuntu1) xenial; urgency=medium
 
