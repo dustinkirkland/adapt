@@ -1,6 +1,7 @@
 adapt (1.2) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/bin/adapt:
+    - fix github issue #1, -d
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 27 Jan 2016 10:20:36 -0800
 
