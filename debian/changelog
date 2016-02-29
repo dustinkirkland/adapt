@@ -1,10 +1,10 @@
-adapt (1.3) unreleased; urgency=medium
+adapt (1.3-0ubuntu1) xenial; urgency=medium
 
   * === added directory usr/share, === added directory usr/share/man,
     === added directory usr/share/man/man1, usr/share/man/man1/adapt.1:
     - added a manpage
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 24 Feb 2016 14:04:20 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 29 Feb 2016 16:45:55 -0600
 
 adapt (1.2-0ubuntu1) xenial; urgency=medium
 
