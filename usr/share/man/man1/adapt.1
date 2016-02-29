@@ -1,0 +1,65 @@
+.TH adapt 1 "29 February 2016" adapt "adapt"
+.SH NAME
+adapt \- adapt a package from any release of Ubuntu for the local system, using containers
+
+.SH SYNOPSIS
+\fBadapt\fP ACTION [OPTIONS]
+
+.SH ACTIONS
+.TP
+alias [-d|distro DISTRO] [-r|--release RELEASE] -c|--command COMMAND
+
+Create an alias to a command in your \fI~/.adapt/bin/\fP directory
+
+.TP
+install [-d|distro DISTRO] [-r|--release RELEASE] -p|--package PACKAGE
+
+Install a package in an adapt container
+.TP
+purge|erase [-d|distro DISTRO] [-r|--release RELEASE] -p|--package PACKAGE
+
+Remove (purge) a package from an adapt container
+.TP
+list
+
+List all available adapt containers
+.TP
+run [-d|distro DISTRO] [-r|--release RELEASE] -c|--command COMMAND
+
+Run a command from an adapt container
+.TP
+shell [-d|distro DISTRO] [-r|--release RELEASE]
+
+Open a shell in an adapt container
+.TP
+unalias [-d|distro DISTRO] [-r|--release RELEASE] -c|--command COMMAND
+
+Remove an alias create
+
+.SH OPTIONS
+
+	-c|--command COMMAND	Command to run or alias or unalias
+
+	-v|--verbose|--debug	Enable verbose debugging
+
+	-d|--distro DISTRO	Distro, e.g ubuntu, centos, debian
+
+	-p|--package PACKAGE	Goes with install, packages to install
+
+	-r|--release RELEASE	Version of distro, e.g. trusty, 7, wheezy
+
+	-h|--help		Display help/usage information
+
+.SH DESCRIPTION
+This package provides a simple, clean method to install and use packages, services, and binaries from one version of Ubuntu onto another, without requiring PPAs.
+
+Instead, it uses LXD and Ubuntu system containers.
+
+.SH SEE ALSO
+\fBapt\fP(8), \fBlxc\fP(1)
+
+.SH AUTHOR
+This manpage and the utility were written by Dustin Kirkland <kirkland@byobu.org> for Ubuntu systems (but may be used by others).  Permission is granted to copy, distribute and/or modify this document and the utility under the terms of the GNU General Public License, Version 3 published by the Free Software Foundation.
+
+The complete text of the GNU General Public License can be found in \fI/usr/share/common-licenses/GPL\fP on Debian/Ubuntu systems or on the web at \fIhttp://www.gnu.org/licenses/gpl.txt\fP.
+
