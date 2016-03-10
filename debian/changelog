@@ -1,3 +1,9 @@
+adapt (1.5) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 10 Mar 2016 15:32:57 -0500
+
 adapt (1.4-0ubuntu1) xenial; urgency=medium
 
   * usr/bin/adapt:
