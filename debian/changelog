@@ -1,9 +1,9 @@
-adapt (1.4) unreleased; urgency=medium
+adapt (1.4-0ubuntu1) xenial; urgency=medium
 
   * usr/bin/adapt:
     - silence unneeded message
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 29 Feb 2016 16:45:57 -0600
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 10 Mar 2016 15:32:55 -0500
 
 adapt (1.3-0ubuntu1) xenial; urgency=medium
 
