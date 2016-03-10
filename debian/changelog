@@ -1,6 +1,7 @@
 adapt (1.4) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/bin/adapt:
+    - silence unneeded message
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 29 Feb 2016 16:45:57 -0600
 
