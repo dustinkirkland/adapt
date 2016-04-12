@@ -1,9 +1,9 @@
-adapt (1.5) unreleased; urgency=medium
+adapt (1.5-0ubuntu1) xenial; urgency=medium
 
   * debian/control:
     - must depend on distro-info
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 10 Mar 2016 15:32:57 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 12 Apr 2016 10:58:47 -0500
 
 adapt (1.4-0ubuntu1) xenial; urgency=medium
 
