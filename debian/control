@@ -8,7 +8,7 @@ Homepage: http://launchpad.net/adapt
 
 Package: adapt
 Architecture: all
-Depends: ${misc:Depends}, lxd, run-one
+Depends: ${misc:Depends}, lxd, run-one, distro-info
 Description: adapt package from one version of Ubuntu to another
  This package provides a simple, clean method to install and use
  packages, services, and binaries from one version of Ubuntu onto

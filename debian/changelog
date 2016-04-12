@@ -1,6 +1,7 @@
 adapt (1.5) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/control:
+    - must depend on distro-info
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 10 Mar 2016 15:32:57 -0500
 
