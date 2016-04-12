@@ -1,3 +1,9 @@
+adapt (1.6) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 12 Apr 2016 10:58:49 -0500
+
 adapt (1.5-0ubuntu1) xenial; urgency=medium
 
   * debian/control:
